@@ -1,12 +1,13 @@
 package com.example.FirstApp;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RazorpayService {
-
+@ConditionalOnProperty(name = "payment.provider",havingValue="razorpay")
+public class RazorpayService implements Payment {
 
     public void pay(){
-        System.out.println("Payment have done");
+        System.out.println("Razorpay payment ");
     }
 }

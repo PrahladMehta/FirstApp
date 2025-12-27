@@ -13,16 +13,16 @@ public class FirstAppApplication implements CommandLineRunner {
 	}
 
 //  Field Dependency
-	@Autowired
-	RazorpayService razorpay;
+//	@Autowired
+	Payment payment;
 
 // Constructure dependency injection
-//	FirstAppApplication(RazorpayService razorpay){
-//		this.razorpay=razorpay;
-//	}
+	FirstAppApplication(Payment payService){
+		this.payment=payService;
+	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		 razorpay.pay();
+		 payment.pay();
 	}
 }
