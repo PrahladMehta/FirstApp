@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Student {
-    int id;
+    Long id;
     String name;
-    String ClassName;
+    String email;
 
 }
